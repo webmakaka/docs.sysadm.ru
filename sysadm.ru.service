@@ -1,5 +1,5 @@
 [Unit]
-Description=sysadm.ru
+Description=docs.sysadm.ru
 
 Requires=docker.service
 After=docker.service
@@ -8,14 +8,14 @@ After=docker.service
 
 Restart=always
 TimeoutStartSec=0
-ExecStartPre=-/usr/bin/docker kill sysadm.ru
-ExecStartPre=-/usr/bin/docker rm sysadm.ru
-ExecStartPre=-/usr/bin/docker pull marley/sysadm.ru:latest
-ExecStart=/bin/sh -c '/usr/bin/docker run --name sysadm.ru   \
+ExecStartPre=-/usr/bin/docker kill docs.sysadm.ru
+ExecStartPre=-/usr/bin/docker rm docs.sysadm.ru
+ExecStartPre=-/usr/bin/docker pull marley/docs.sysadm.ru:latest
+ExecStart=/bin/sh -c '/usr/bin/docker run --name docs.sysadm.ru   \
  -p 4006:80                        \
- marley/sysadm.ru'
-ExecStop=-/usr/bin/docker kill sysadm.ru
-ExecStop=-/usr/bin/docker rm sysadm.ru
+ marley/docs.sysadm.ru'
+ExecStop=-/usr/bin/docker kill docs.sysadm.ru
+ExecStop=-/usr/bin/docker rm docs.sysadm.ru
 
 [Install]
 WantedBy=multi-user.target

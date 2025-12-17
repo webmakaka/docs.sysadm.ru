@@ -29,15 +29,15 @@ $ sudo apt install -y openssh-server vim curl git
 
 <br/>
 
-### Запуск sysadm.ru в редакторе vscode
+### Запуск docs.sysadm.ru в редакторе vscode
 
 <br/>
 
 ```
 $ mkdir ~/projects && cd ~/projects
-// $ GIT_SSH_COMMAND='ssh -i ~/.ssh/webmakaka -o IdentitiesOnly=yes' git clone git@github.com:webmakaka/sysadm.ru.git
-$ git clone https://github.com/webmakaka/sysadm.ru.git
-$ cd ~/projects/sysadm.ru
+// $ GIT_SSH_COMMAND='ssh -i ~/.ssh/webmakaka -o IdentitiesOnly=yes' git clone git@github.com:webmakaka/docs.sysadm.ru.git
+$ git clone https://github.com/webmakaka/docs.sysadm.ru.git
+$ cd ~/projects/docs.sysadm.ru
 $ code .
 ```
 

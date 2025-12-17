@@ -23,22 +23,22 @@ permalink: /server/linux/webserver/apache/virtual-hosts/
 
     ### IT
 
-    include conf/websites/_IT/sysadm.ru.conf
+    include conf/websites/_IT/docs.sysadm.ru.conf
 
 <br/>
 
-    $ vi /opt/httpd/2.4.3/conf/websites/_IT/sysadm.ru.conf
+    $ vi /opt/httpd/2.4.3/conf/websites/_IT/docs.sysadm.ru.conf
 
 <br/>
 
     <VirtualHost *:80>
-        ServerName sysadm.ru
-        ServerAlias www.sysadm.ru
-        DocumentRoot /u01/webProjects/_IT/sysadm.ru
-        ErrorLog /u01/logs/_IT/sysadm.ru/sysadm.ru-error.log
-        CustomLog /u01/logs/_IT/sysadm.ru/sysadm.ru-access.log combined
+        ServerName docs.sysadm.ru
+        ServerAlias www.docs.sysadm.ru
+        DocumentRoot /u01/webProjects/_IT/docs.sysadm.ru
+        ErrorLog /u01/logs/_IT/docs.sysadm.ru/docs.sysadm.ru-error.log
+        CustomLog /u01/logs/_IT/docs.sysadm.ru/docs.sysadm.ru-access.log combined
 
-        <Directory "/u01/webProjects/_IT/sysadm.ru">
+        <Directory "/u01/webProjects/_IT/docs.sysadm.ru">
             Options All
             AllowOverride All
             Require all granted

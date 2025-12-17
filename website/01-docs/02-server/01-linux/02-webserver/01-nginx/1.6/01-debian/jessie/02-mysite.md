@@ -15,7 +15,7 @@ permalink: /server/linux/webserver/nginx/1.6/debian/jessie/mysite/
 
     # vi /etc/hosts
 
-    127.0.0.1 sysadm.ru
+    127.0.0.1 docs.sysadm.ru
 
 <br/>
 
@@ -23,19 +23,19 @@ permalink: /server/linux/webserver/nginx/1.6/debian/jessie/mysite/
 
 <br/>
 
-    # mkdir -p /projects/sysadm.ru/public/
-    # mkdir -p /projects/sysadm.ru/logs/
+    # mkdir -p /projects/docs.sysadm.ru/public/
+    # mkdir -p /projects/docs.sysadm.ru/logs/
 
 <br/>
 
-    # vi /etc/nginx/sites-available/sysadm.ru.config
+    # vi /etc/nginx/sites-available/docs.sysadm.ru.config
 
     server {
         listen     *:8080;
-        server_name sysadm.ru;
-        access_log /projects/sysadm.ru/logs/access.log;
-        error_log /projects/sysadm.ru/logs/error.log;
-        root /projects/sysadm.ru/public;
+        server_name docs.sysadm.ru;
+        access_log /projects/docs.sysadm.ru/logs/access.log;
+        error_log /projects/docs.sysadm.ru/logs/error.log;
+        root /projects/docs.sysadm.ru/public;
 
         location / {
             index index.php index.html;
@@ -61,29 +61,29 @@ permalink: /server/linux/webserver/nginx/1.6/debian/jessie/mysite/
 
     # rm default
 
-    # ln -s /etc/nginx/sites-available/sysadm.ru.config
+    # ln -s /etc/nginx/sites-available/docs.sysadm.ru.config
     # service nginx restart
 
 <br/>
 
 ### Проверка
 
-    # vi /projects/sysadm.ru/public/index.php
+    # vi /projects/docs.sysadm.ru/public/index.php
 
-    <?php echo "<h1>Hello, sysadm.ru</h1>" ?>
-
-<br/>
-
-    # curl sysadm.ru:8080
-    <h1>Hello, sysadm.ru</h1>
+    <?php echo "<h1>Hello, docs.sysadm.ru</h1>" ?>
 
 <br/>
 
-    # cat /projects/sysadm.ru/logs/access.log
+    # curl docs.sysadm.ru:8080
+    <h1>Hello, docs.sysadm.ru</h1>
+
+<br/>
+
+    # cat /projects/docs.sysadm.ru/logs/access.log
     127.0.0.1 - - [02/Apr/2016:12:09:07 +0000] "GET / HTTP/1.1" 200 43 "-" "curl/7.38.0"
     127.0.0.1 - - [02/Apr/2016:12:10:34 +0000] "GET / HTTP/1.1" 200 43 "-" "curl/7.38.0"
     127.0.0.1 - - [02/Apr/2016:12:10:44 +0000] "GET / HTTP/1.1" 200 37 "-" "curl/7.38.0"
 
 <br/>
 
-Если все OK. Можно из hosts убрать запись, что 127.0.0.1 это sysadm.ru
+Если все OK. Можно из hosts убрать запись, что 127.0.0.1 это docs.sysadm.ru

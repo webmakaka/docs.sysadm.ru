@@ -1,12 +1,12 @@
 ---
 layout: page
 title: О Сайте
-description: О Сайте SYSADM.RU
-keywords: О Сайте SYSADM.RU
+description: О Сайте docs.sysadm.ru
+keywords: О Сайте docs.sysadm.ru
 permalink: /about/
 ---
 
-# О Сайте SYSADM.RU
+# О Сайте docs.sysadm.ru
 
 Сайт построен на технологии "static pages". Используется технология Jekyll, расширяющая базовые возможности статических страниц.
 
@@ -16,7 +16,7 @@ permalink: /about/
 
 <br/>
 
-## Об админе сайте sysadm.ru
+## Об админе сайте docs.sysadm.ru
 
 <br/>
 

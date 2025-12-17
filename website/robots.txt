@@ -5,5 +5,5 @@ permalink: robots.txt
 
 User-agent: *
 Allow: /
-Host: https://sysadm.ru
-Sitemap: https://sysadm.ru/sitemap.xml
+Host: https://docs.sysadm.ru
+Sitemap: https://docs.sysadm.ru/sitemap.xml

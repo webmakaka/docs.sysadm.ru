@@ -1,4 +1,4 @@
-# Исходники сайта [sysadm.ru](https://sysadm.ru)
+# Исходники сайта [docs.sysadm.ru](https://docs.sysadm.ru)
 
 <br/>
 
@@ -8,8 +8,8 @@
 
 ```
 $ cd ~
-$ mkdir -p ~/projects/sysadm.ru && cd ~/projects/sysadm.ru
-$ git clone --depth=1 https://github.com/webmakaka/sysadm.ru.git .
+$ mkdir -p ~/projects/docs.sysadm.ru && cd ~/projects/docs.sysadm.ru
+$ git clone --depth=1 https://github.com/webmakaka/docs.sysadm.ru.git .
 $ docker-compose up
 ```
 
@@ -19,10 +19,10 @@ $ docker-compose up
 
 <br/>
 
-### Запустить sysadm.ru на своем хосте с использованием docker контейнера:
+### Запустить docs.sysadm.ru на своем хосте с использованием docker контейнера:
 
 ```
-$ docker run -i -t -p 80:80 --name sysadm.ru marley/sysadm.ru
+$ docker run -i -t -p 80:80 --name docs.sysadm.ru marley/docs.sysadm.ru
 ```
 
 <br/>
@@ -30,15 +30,15 @@ $ docker run -i -t -p 80:80 --name sysadm.ru marley/sysadm.ru
 ### Как сервис
 
 ```
-# vi /etc/systemd/system/sysadm.ru.service
+# vi /etc/systemd/system/docs.sysadm.ru.service
 ```
 
-вставить содержимое файла sysadm.ru.service
+вставить содержимое файла docs.sysadm.ru.service
 
 ```
-# systemctl enable sysadm.ru.service
-# systemctl start  sysadm.ru.service
-# systemctl status sysadm.ru.service
+# systemctl enable docs.sysadm.ru.service
+# systemctl start  docs.sysadm.ru.service
+# systemctl status docs.sysadm.ru.service
 ```
 
 http://localhost:4006

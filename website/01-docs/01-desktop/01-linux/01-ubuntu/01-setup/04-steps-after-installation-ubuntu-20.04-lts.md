@@ -51,12 +51,12 @@ https://code.visualstudio.com/docs/setup/linux
 
 <br/>
 
-### Запуск sysadm.ru в редакторе vscode
+### Запуск docs.sysadm.ru в редакторе vscode
 
 ```
 $ mkdir ~/projects && cd ~/projects
-$ git clone https://github.com/webmakaka/sysadm.ru.git
-$ cd ~/projects/sysadm.ru
+$ git clone https://github.com/webmakaka/docs.sysadm.ru.git
+$ cd ~/projects/docs.sysadm.ru
 $ code .
 ```
 

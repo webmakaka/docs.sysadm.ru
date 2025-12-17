@@ -10,7 +10,7 @@ permalink: /server/linux/webserver/nginx/1.8/debian/jessie/proxy/
 
 Устанавливаю также как <a href="/server/linux/webserver/nginx/1.8/debian/jessie/setup/">здесь</a>
 
-На 192.168.1.202 работает webserver и принимает и корректно обрабатывает запросы на обращение по адресу sysadm.ru на порту 8080.
+На 192.168.1.202 работает webserver и принимает и корректно обрабатывает запросы на обращение по адресу docs.sysadm.ru на порту 8080.
 
 <br/>
 
@@ -25,7 +25,7 @@ permalink: /server/linux/webserver/nginx/1.8/debian/jessie/proxy/
 
 <br/>
 
-    # vi /etc/nginx/conf.d/sysadm.ru.conf
+    # vi /etc/nginx/conf.d/docs.sysadm.ru.conf
 
 <br/>
 
@@ -36,7 +36,7 @@ upstream webserver  {
 
 server {
     listen     80;
-    server_name sysadm.ru;
+    server_name docs.sysadm.ru;
 
     location / {
         proxy_pass  http://webserver;
@@ -56,8 +56,8 @@ server {
 
 <br/>
 
-    # curl sysadm.ru:80
-    <h1>Hello, sysadm.ru</h1>
+    # curl docs.sysadm.ru:80
+    <h1>Hello, docs.sysadm.ru</h1>
 
 <br/>
 
