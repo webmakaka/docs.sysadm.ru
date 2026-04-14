@@ -242,3 +242,15 @@ Command: /opt/telegram/telegram -startintray
 ![Автозапуск telegram](/img/desktop/linux/ubuntu/setup/autostart-telegram.png "Автозапуск telegram"){: .center-image }
 
 -->
+
+<br/>
+
+### Добавление swap файла
+
+```shell
+$ sudo fallocate -l 4G /swapfile
+$ sudo chmod 600 /swapfile
+$ sudo mkswap /swapfile
+$ sudo swapon /swapfile
+$ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+```
