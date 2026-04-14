@@ -254,3 +254,69 @@ $ sudo mkswap /swapfile
 $ sudo swapon /swapfile
 $ echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 ```
+
+<br/>
+
+### zRAM
+
+```shell
+$ sudo apt update
+$ sudo apt install -y zram-tools
+```
+
+<br/>
+
+```shell
+$ sudo vi /etc/default/zramswap
+```
+
+<br/>
+
+```
+ALLOCATION_STRATEGY=percent
+PERCENT=60
+# Алгоритм сжатия zstd самый эффективный
+COMPRESSION_ALGORITHM=zstd
+```
+
+<br/>
+
+```shell
+$ sudo systemctl restart zramswap
+```
+
+<br/>
+
+```shell
+$ zramctl
+NAME       ALGORITHM DISKSIZE DATA COMPR TOTAL STREAMS MOUNTPOINT
+/dev/zram0 lz4           9.3G   4K   64B   20K       4 [SWAP]
+```
+
+<br/>
+
+```shell
+$ sudo sysctl vm.swappiness=100
+```
+
+<br/>
+
+```shell
+$ cat /proc/sys/vm/swappiness
+100
+```
+
+<br/>
+
+```shell
+$ echo 'vm.swappiness=100' | sudo tee -a /etc/sysctl.conf
+```
+
+<br/>
+
+```shell
+$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       7.8Gi       2.1Gi       243Mi       5.7Gi       7.2Gi
+Swap:           13Gi          0B        13Gi
+```
