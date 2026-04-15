@@ -1,0 +1,47 @@
+---
+layout: page
+title: Установка amneziawg в Ubuntu Linux
+description: Установка amneziawg в Ubuntu Linux
+keywords: desktop, linux, ubuntu, editors, vpn, amneziawg
+permalink: /desktop/linux/ubuntu/vpn/amneziawg/
+---
+
+<br/>
+
+# Установка amneziawg
+
+<br/>
+
+```shell
+$ sudo add-apt-repository ppa:amnezia/ppa
+$ sudo apt install amneziawg amneziawg-tools
+```
+
+<br/>
+
+```shell
+$ cat <<EOF > test.conf
+[Interface]
+PrivateKey = $(awg genkey)
+Address = 10.0.0.2/32
+Jc = 4
+Jmin = 40
+Jmax = 70
+
+[Peer]
+PublicKey = vP77S5S5S5S5S5S5S5S5S5S5S5S5S5S5S5S5S5S5S5U=
+Endpoint = 1.1.1.1:51820
+AllowedIPs = 0.0.0.0/0
+EOF
+```
+
+<br/>
+
+```shell
+$ sudo awg-quick up ./test.conf
+$ sudo awg-quick down ./test.conf
+```
+
+<br/>
+
+https://github.com/ImMALWARE/bash-warp-generator
