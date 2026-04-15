@@ -45,3 +45,17 @@ $ sudo awg-quick down ./test.conf
 <br/>
 
 https://github.com/ImMALWARE/bash-warp-generator
+
+<br/>
+
+```shell
+$ sudo awg-quick up ./test.conf
+$ sudo awg-quick down ./test.conf
+```
+
+<br/>
+
+```shell
+$ curl ifconfig.me
+2a09:bac5:5157:2373::388:76
+```
