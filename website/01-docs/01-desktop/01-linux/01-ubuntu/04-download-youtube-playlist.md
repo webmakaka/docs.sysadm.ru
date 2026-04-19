@@ -39,6 +39,13 @@ $ sudo apt install -y ffmpeg
 <br/>
 
 ```shell
+$ curl -fsSL https://deno.land/install.sh | sh
+$ source ~/.bashrc
+```
+
+<br/>
+
+```shell
 $ sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 $ sudo chmod a+rx /usr/local/bin/yt-dlp
 ```
@@ -83,6 +90,42 @@ $ yt-dlp -i -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --mer
 
 output я меняю, т.к. по умолчанию в конце добавляется id видео. Мне это не нужно.
 Можно, также использовать такой формат как --output "%(uploader)s%(title)s.%(ext)s"
+
+<br/>
+
+YouTube стал блочить и просить логиниться.
+
+<br/>
+
+**Помогло:**
+
+<br/>
+
+Установка google chrome extension: "Get cookies.txt LOCALLY"
+
+<br/>
+
+Зайти на страницу с video:
+
+<br/>
+
+```
+$ vi youtube_cookies.txt
+```
+
+<br/>
+
+Скопировать cookie
+
+<br/>
+
+```shell
+$ yt-dlp -f "bestvideo+bestaudio/best" \
+--merge-output-format mp4 \
+--cookies youtube_cookies.txt \
+--js-runtimes deno \
+"https://www.youtube.com/watch?v=jWtWDAYtyb4"
+```
 
 <br/>
 
@@ -159,8 +202,4 @@ https://unix.stackexchange.com/questions/272868/download-only-format-mp4-on-yt-d
 
 ```
 $ yt-dlp -o - https://www.youtube.com/watch?v=5_J7RWLLVeQ | vlc -
-```
-
-```
-
 ```
