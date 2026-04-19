@@ -76,13 +76,6 @@ https://www.youtube.com/watch?v=DU9K1rIUWrY&list=PLhgRAQ8BwWFaxlkNNtO0NDPmaVO9tx
 
 ```shell
 // Скачиваю видео лучшего качества из имеющегося:
-$ yt-dlp -i -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 https://www.youtube.com/watch?v=-Ll8DtpNtvk --output "%(title)s.%(ext)s"
-```
-
-<br/>
-
-```shell
-// Скачиваю видео лучшего качества из имеющегося:
 $ yt-dlp -i -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 https://www.youtube.com/watch?list=PLhgRAQ8BwWFaxlkNNtO0NDPmaVO9txRg8 --output "%(title)s.%(ext)s"
 ```
 
