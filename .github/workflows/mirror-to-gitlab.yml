@@ -19,6 +19,6 @@ jobs:
           git remote add gitlab https://$GITLAB_USERNAME:$GITLAB_TOKEN@gitlab.com/$GITLAB_USERNAME/$GITLAB_REPONAME.git
           git push --mirror gitlab
         env:
-          GITLAB_REPONAME: docs.gitops.ru
+          GITLAB_REPONAME: docs.sysadm.ru
           GITLAB_USERNAME: webmakaka
           GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
