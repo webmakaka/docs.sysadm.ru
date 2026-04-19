@@ -1,66 +1,46 @@
 ---
 layout: page
-title: Скачать playlist с youtube в Ubuntu Linux
-description: Скачать playlist с youtube в Ubuntu Linux
-keywords: linux, ubuntu, youtube, скачать, playlist, youtube-dl
+title: Скачать playlist с youtube в командной строке ubuntu linux (yt-dlp)
+description: Скачать playlist с youtube в командной строке ubuntu linux (yt-dlp)
+keywords: linux, ubuntu, youtube, скачать, playlist, yt-dlp
 permalink: /desktop/linux/ubuntu/download-youtube-playlist/
 ---
 
-# Скачать playlist с youtube в Ubuntu Linux
-
-<br/>
-
-В общем YouTube сделал так, чтобы видео с него скачивались очень медленно и ничего с этим пока поделать нельзя.
-
-<br/>
-
-### Скачать playlist с youtube в GUI
-
-Я использую для этих целей 4k video downloader.
-
-Из минусов - ограничение в 10 файлов в плейлисте для бесплатной версии и реклама уг.
-
-<br/>
-
-### Скачать playlist с youtube в командной строке (youtube-dl)
-
-Т.к. 4k video downloader имеет ограничение на размер плейлиста. Буду юзать программу которая скачивает плейлисты в командной строке.
+# Скачать playlist с youtube в командной строке ubuntu linux (yt-dlp)
 
 <br/>
 
 Делаю:  
-02.06.2023 - Перестало работать!
+2026.04.19
+
+<br/>
+
+Автозаменой прошелся по командой. М.б. что и не работает.
+
+<br/>
+
+Т.к. youtube забанили в РФ. Можно скачивать в бесплатном <a href="//docs.gitops.ru/tools/clouds/google/google-cloud-shell/run/">google cloud shell</a>, чем я сосбственно сейчас и занимаюсь.
+
+<br/>
 
 **Программа: **
-https://rg3.github.io/youtube-dl/download.html
+https://github.com/yt-dlp/yt-dlp/wiki/Installation
 
 <br/>
 
-```
-$ youtube-dl -U
-youtube-dl is up-to-date (2021.12.17)
-```
+**Установить ffmpeg - иначе могут быть видео и аудио отдельно!** (м.б. и неактуально уже).
 
 <br/>
 
-Возможно решение проблемы в следующем ролике:  
-https://www.youtube.com/watch?v=tMtszkwxo48
-
-<br/>
-
-**Установить ffmpeg - иначе могут быть видео и аудио отдельно!**
-
-<br/>
-
-```
+```shell
 $ sudo apt install -y ffmpeg
 ```
 
 <br/>
 
-```
-$ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
-$ sudo chmod a+rx /usr/local/bin/youtube-dl
+```shell
+$ sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
+$ sudo chmod a+rx /usr/local/bin/yt-dlp
 ```
 
 <!--
@@ -68,7 +48,7 @@ $ sudo chmod a+rx /usr/local/bin/youtube-dl
 <br/>
 
 Можно установить ее с помощью pip3:
-    $ sudo pip3 install youtube-dl --upgrade
+    $ sudo pip3 install yt-dlp --upgrade
 
 -->
 
@@ -78,8 +58,8 @@ $ sudo chmod a+rx /usr/local/bin/youtube-dl
 
 <br/>
 
-```
-$ mkdir ~/Downloads/myPlaylist && cd ~/Downloads/myPlaylist
+```shell
+$ mkdir -p ~/Downloads/myPlaylist && cd ~/Downloads/myPlaylist
 ```
 
 <br/>
@@ -94,15 +74,21 @@ https://www.youtube.com/watch?v=DU9K1rIUWrY&list=PLhgRAQ8BwWFaxlkNNtO0NDPmaVO9tx
 
 <br/>
 
--- Скачиваю видео лучшего качества из имеющегося:
-
-```
-$ youtube-dl -i -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 https://www.youtube.com/watch?list=PLhgRAQ8BwWFaxlkNNtO0NDPmaVO9txRg8 --output "%(title)s.%(ext)s"
+```shell
+// Скачиваю видео лучшего качества из имеющегося:
+$ yt-dlp -i -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 https://www.youtube.com/watch?v=-Ll8DtpNtvk --output "%(title)s.%(ext)s"
 ```
 
 <br/>
 
-output я меняю, т.к. по умолчанию в конце добавляется id видео. Мне это не нужно.  
+```shell
+// Скачиваю видео лучшего качества из имеющегося:
+$ yt-dlp -i -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 https://www.youtube.com/watch?list=PLhgRAQ8BwWFaxlkNNtO0NDPmaVO9txRg8 --output "%(title)s.%(ext)s"
+```
+
+<br/>
+
+output я меняю, т.к. по умолчанию в конце добавляется id видео. Мне это не нужно.
 Можно, также использовать такой формат как --output "%(uploader)s%(title)s.%(ext)s"
 
 <br/>
@@ -115,10 +101,10 @@ output я меняю, т.к. по умолчанию в конце добавл�
     -i - игнорить ошибки, вроде скрытого файла.
 
 <br/>
-    
+
 **Можно также выбрать более подходящий формат:**
 
-    youtube-dl -F http://www.youtube.com/watch?v=3JZ_D3ELwOQ
+    yt-dlp -F http://www.youtube.com/watch?v=3JZ_D3ELwOQ
     sample output:
 
     [youtube] Setting language
@@ -146,24 +132,24 @@ output я меняю, т.к. по умолчанию в конце добавл�
 
 You can choose best and type
 
-    $ youtube-dl -f 22 http://www.youtube.com/watch?v=3JZ_D3ELwOQ
+    $ yt-dlp -f 22 http://www.youtube.com/watch?v=3JZ_D3ELwOQ
 
 <br/>
 
 To get the best video quality (1080p DASH - format "137") and best audio quality (DASH audio - format "140"), you must use the following command:
 
-    $ youtube-dl -f 137+140 http://www.youtube.com/watch?v=3JZ_D3ELwOQ
+    $ yt-dlp -f 137+140 http://www.youtube.com/watch?v=3JZ_D3ELwOQ
 
 <br/>
 
-**Подробнее:**  
-https://unix.stackexchange.com/questions/272868/download-only-format-mp4-on-youtube-dl/272934
+**Подробнее:**
+https://unix.stackexchange.com/questions/272868/download-only-format-mp4-on-yt-dlp/272934
 
 <!-- <br/>
 
 ### Сообщение о необходимости обновить avconv
 
-    WARNING: Your copy of avconv is outdated and unable to properly mux separate video and audio files, youtube-dl will download single file media. Update avconv to version 10-0 or newer to fix this.
+    WARNING: Your copy of avconv is outdated and unable to properly mux separate video and audio files, yt-dlp will download single file media. Update avconv to version 10-0 or newer to fix this.
 
     $ avconv |& grep \ version | awk '{print $3}'
     9.20-6:9.20-0ubuntu0.14.04.1,
@@ -179,5 +165,9 @@ https://unix.stackexchange.com/questions/272868/download-only-format-mp4-on-yout
 ### Передать поток в VLC
 
 ```
-$ youtube-dl -o - https://www.youtube.com/watch?v=5_J7RWLLVeQ | vlc -
+$ yt-dlp -o - https://www.youtube.com/watch?v=5_J7RWLLVeQ | vlc -
+```
+
+```
+
 ```
