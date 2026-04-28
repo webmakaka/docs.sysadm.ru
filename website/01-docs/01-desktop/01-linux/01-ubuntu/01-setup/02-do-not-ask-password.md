@@ -39,13 +39,9 @@ $ sudo vi /etc/sudoers
 %sudo   ALL=(ALL:ALL) NOPASSWD:ALL
 ```
 
-<!--
-    root    ALL=(ALL:ALL) ALL
-
-    меняю на
-
-    root    ALL=(ALL:ALL) ALL
-    <username>    ALL=(ALL:ALL) NOPASSWD:ALL -->
+```shell
+:wq!
+```
 
 <br/>
 
