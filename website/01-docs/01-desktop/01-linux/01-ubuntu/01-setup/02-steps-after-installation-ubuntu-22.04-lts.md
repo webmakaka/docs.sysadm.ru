@@ -156,7 +156,9 @@ Keyboard -> Input Sources -> +Russian
 
 <br/>
 
-    $ gnome-tweaks
+```shell
+$ gnome-tweaks
+```
 
 <br/>
 
@@ -221,7 +223,6 @@ Colors --> Built-in schemes: Black on white
 ```shell
 $ sudo mv telegram /opt/telegram
 ```
-
 
 ```shell
 $ gnome-tweaks

@@ -55,7 +55,7 @@ root
 
 <br/>
 
-### В Mint
+### В Linux Mint
 
 ```
 ***

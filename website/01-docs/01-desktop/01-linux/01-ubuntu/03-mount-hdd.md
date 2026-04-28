@@ -3,7 +3,7 @@ layout: page
 title: Ubuntu - Монтирование жестких дисков
 description: Ubuntu - Монтирование жестких дисков
 keywords: Ubuntu - Монтирование жестких дисков
-permalink: /desktop/linux/ubuntu/setup/mount-hdd/
+permalink: /desktop/linux/ubuntu/mount/hdd/
 ---
 
 # [Ubuntu] Монтирование жестких дисков
