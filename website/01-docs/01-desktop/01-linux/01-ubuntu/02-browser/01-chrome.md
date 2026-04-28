@@ -69,16 +69,9 @@ Settings -> Advanced -> Language -> Order Languages based on your preferences: E
 
 ### Дополнительные плагины
 
-- EditThisCookie
-- LanguageTool
-
-<!--
-- Nimbus Screenshoot & Screen Video Recorder
--->
-
+- User-Agent Switcher and Manager
 - Доступ рутрекер
 - SponsorBlock for YouTube
-
 - uBlacklist
   https://chrome.google.com/webstore/detail/ublacklist/pncfbmialoiaghdehhbnbhkkgmjanfhe
 
