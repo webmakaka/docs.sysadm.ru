@@ -9,14 +9,13 @@ permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-22.04-lts
 # Шаги после инсталляции Ubuntu 22.04 LTS (для себя)
 
 **Делаю:**  
-2024.03.10
+2026.04.28
 
 <br/>
 
 ### Обновление
 
-```
-$ sudo su -
+```shell
 $ sudo apt update -y && sudo apt upgrade -y
 $ sudo apt install -y openssh-server vim curl git
 ```
@@ -33,7 +32,7 @@ $ sudo apt install -y openssh-server vim curl git
 
 <br/>
 
-```
+```shell
 $ mkdir ~/projects && cd ~/projects
 // $ GIT_SSH_COMMAND='ssh -i ~/.ssh/webmakaka -o IdentitiesOnly=yes' git clone git@github.com:webmakaka/docs.sysadm.ru.git
 $ git clone https://github.com/webmakaka/docs.sysadm.ru.git
@@ -47,14 +46,14 @@ $ code .
 
 <br/>
 
-```
+```shell
 $ sudo ubuntu-drivers autoinstall
 $ sudo apt install -y ubuntu-restricted-extras
 ```
 
 <br/>
 
-```
+```shell
 // Основные
 $ sudo apt install -y \
     vim \
@@ -67,7 +66,7 @@ $ sudo apt install -y \
 
 <br/>
 
-```
+```shell
 // Дополнительные
 $ sudo apt install -y \
     vlc \
@@ -90,7 +89,7 @@ $ sudo apt install -y \
 
 ### Gnome Panel
 
-```
+```shell
 $ sudo apt install -y gnome-panel && sudo reboot
 ```
 
@@ -102,7 +101,7 @@ $ sudo apt install -y gnome-panel && sudo reboot
 
 ### Установить нормальный background
 
-```
+```shell
 $ gsettings set org.gnome.desktop.background picture-options 'none'
 
 $ gsettings set org.gnome.desktop.background primary-color '#548080'
@@ -114,11 +113,13 @@ $ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 ### Добавление русского языка
 
-```
+```shell
 $ gnome-control-center
 ```
 
-    Keyboard -> Input Sources -> +Russian
+```
+Keyboard -> Input Sources -> +Russian
+```
 
 <br/>
 
@@ -213,11 +214,16 @@ Colors --> Built-in schemes: Black on white
 
 <br/>
 
-### Telegram
+### Автозапуск telegram
 
-    $ sudo mv telegram /opt/telegram
+```shell
+$ sudo mv telegram /opt/telegram
+```
 
-    $ gnome-tweaks
+
+```shell
+$ gnome-tweaks
+```
 
     Startup Applications
 
@@ -227,8 +233,10 @@ Colors --> Built-in schemes: Black on white
 
 ### Автозапуск telegram
 
-    $ sudo mkdir -p /opt/telegram
-    $ sudo mv Telegram /opt/telegram/
+```shell
+$ sudo mkdir -p /opt/telegram
+$ sudo mv Telegram /opt/telegram/
+```
 
 <br/>
 
