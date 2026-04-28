@@ -13,6 +13,10 @@ permalink: /desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-22.04-lts
 
 <br/>
 
+### [Не спрашивать каждый раз пароль при комаде с sudo](/desktop/linux/ubuntu/setup/do-not-ask-root-password/)
+
+<br/>
+
 ### Обновление
 
 ```shell
@@ -21,8 +25,6 @@ $ sudo apt install -y openssh-server vim curl git
 ```
 
 <br/>
-
-### [Не спрашивать каждый раз пароль при комаде с sudo](/desktop/linux/ubuntu/setup/do-not-ask-root-password/)
 
 ### [Установка VSCODE в Ubuntu Linux](/desktop/linux/ubuntu/editors/vscode/)
 
