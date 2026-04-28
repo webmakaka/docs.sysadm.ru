@@ -1,6 +1,7 @@
 ## Build layer
 # FROM ruby:latest
-FROM ruby:2.7
+# FROM ruby:2.7
+FROM ruby:2.7-slim
 
 # Install program to configure locales
 RUN apt-get update && apt-get install -y locales vim less
@@ -28,6 +29,7 @@ RUN bundle exec jekyll build
 RUN bundle exec htmlproofer ./_site --file-ignore /.git/,./_site/404.html --only-4xx --check-html --allow-hash-href --assume-extension
 
 # Hosting Layer
-FROM nginx
+# FROM nginx
+FROM nginx:alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=0 /project/_site/ /usr/share/nginx/html/
