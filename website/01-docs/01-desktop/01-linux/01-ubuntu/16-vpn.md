@@ -10,11 +10,20 @@ permalink: /desktop/linux/ubuntu/vpn/amneziawg/
 
 # Установка amneziawg
 
+**Делаю:**  
+2026.04.28
+
 <br/>
 
 ```shell
 $ sudo add-apt-repository ppa:amnezia/ppa
-$ sudo apt install amneziawg amneziawg-tools
+$ sudo apt install -y amneziawg amneziawg-tools
+```
+
+<br/>
+
+```shell
+$ cd ~/tmp
 ```
 
 <br/>
@@ -44,6 +53,7 @@ $ sudo awg-quick down ./test.conf
 
 <br/>
 
+// Пока перестало работать!  
 https://github.com/ImMALWARE/bash-warp-generator
 
 <br/>
