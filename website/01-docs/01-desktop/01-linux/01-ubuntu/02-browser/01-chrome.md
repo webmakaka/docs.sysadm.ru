@@ -32,6 +32,20 @@ $ sudo apt install -y google-chrome-stable
 
 <br/>
 
+```
+// Инсталляция Chrome в Ubuntu 26.04
+// Первая попытка установить и запустить
+2026.04.28
+
+$ curl -fsSL https://dl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /etc/apt/keyrings/google-chrome.gpg
+$ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+$ sudo apt update -y
+$ sudo apt install -y google-chrome-stable
+$ google-chrome-stable --ozone-platform=x11
+```
+
+<br/>
+
 ### Отключить всплывающие уведомления и всякую слежку
 
 Settings --> Privacy and Security --> Site Settings:
