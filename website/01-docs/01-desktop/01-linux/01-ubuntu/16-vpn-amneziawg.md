@@ -58,6 +58,18 @@ https://github.com/ImMALWARE/bash-warp-generator
 
 <br/>
 
+// OK!
+
+Телеграм-боты:
+
+```
+@warp_generator_bot,
+@free_vpn_amnezia_bot,
+@warpGuardBot.
+```
+
+<br/>
+
 ```shell
 $ sudo awg-quick up ./test.conf
 $ sudo awg-quick down ./test.conf
