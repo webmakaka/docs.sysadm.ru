@@ -69,3 +69,14 @@ $ sudo awg-quick down ./test.conf
 $ curl ifconfig.me
 2a09:bac5:5157:2373::388:76
 ```
+
+<br/>
+
+### Ошибки:
+
+```
+// /usr/bin/awg-quick: line 32: resolvconf: command not found
+$ sudo apt update && sudo apt install resolvconf
+```
+
+
