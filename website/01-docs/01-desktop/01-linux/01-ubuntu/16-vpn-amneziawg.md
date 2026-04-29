@@ -11,7 +11,7 @@ permalink: /desktop/linux/ubuntu/vpn/amneziawg/
 # Установка amneziawg
 
 **Делаю:**  
-2026.04.28
+2026.04.29
 
 <br/>
 
@@ -53,6 +53,8 @@ $ sudo awg-quick down ./test.conf
 
 <br/>
 
+https://warp-generator.github.io/
+
 // Пока перестало работать!  
 https://github.com/ImMALWARE/bash-warp-generator
 
@@ -81,3 +83,20 @@ $ sudo awg-quick down ./test.conf
 $ curl ifconfig.me
 2a09:bac5:5157:2373::388:76
 ```
+
+<br/>
+
+```shell
+$ sudo awg show
+```
+
+<br/>
+
+### Ошибки:
+
+```
+// /usr/bin/awg-quick: line 32: resolvconf: command not found
+$ sudo apt update && sudo apt install resolvconf
+```
+
+
