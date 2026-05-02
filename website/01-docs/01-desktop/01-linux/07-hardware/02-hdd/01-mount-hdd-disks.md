@@ -9,7 +9,7 @@ permalink: /desktop/linux/hardware/hdd/mount-disks/
 # Монтирование жесткого диска в linux
 
 Делаю!  
-2023.10.31
+2026.05.02
 
 <br/>
 
@@ -19,14 +19,14 @@ permalink: /desktop/linux/hardware/hdd/mount-disks/
 
 <br/>
 
-```
-# fdisk -l /dev/sd*
+```shell
+$ sudo fdisk -l /dev/sd*
 ```
 
 <br/>
 
-```
-# ls /dev/sd*
+```shell
+$ ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/sdb
 ```
 
@@ -36,13 +36,13 @@ permalink: /desktop/linux/hardware/hdd/mount-disks/
 
 <br/>
 
-```
-# fdisk /dev/sdb
+```shell
+$ sudo fdisk /dev/sdb
 ```
 
 <br/>
 
-```
+```shell
 Command (m for help): [n]
 Partition number (1-128, default 1): [p]
 Value out of range.
@@ -60,71 +60,64 @@ Syncing disks.
 
 <br/>
 
-```
--- Запись на созданный раздел фаловой системы
-# mkfs.ext4 /dev/sdb1
+```shell
+// Запись на созданный раздел фаловой системы
+$ sudo mkfs.ext4 /dev/sdb1
+mke2fs 1.46.5 (30-Dec-2021)
+Discarding device blocks: done
+Creating filesystem with 244190390 4k blocks and 61054976 inodes
+Filesystem UUID: 875447e4-0a36-42a5-a3e1-e6ce7ae6e100
+Superblock backups stored on blocks:
+	32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208,
+	4096000, 7962624, 11239424, 20480000, 23887872, 71663616, 78675968,
+	102400000, 214990848
+
+Allocating group tables: done
+Writing inode tables: done
+Creating journal (262144 blocks):
+done
+Writing superblocks and filesystem accounting information: done
 ```
 
 <br/>
 
-```
-# ls /dev/sd*
+```shell
+$ ls /dev/sd*
 /dev/sda  /dev/sda1  /dev/sda2  /dev/sdb  /dev/sdb1
 ```
 
 <br/>
 
-```
-# mkdir /mnt/dsk1
+```shell
+$ sudo mkdir /mnt/dsk1
 ```
 
  <br/>
 
-```
-# blkid /dev/sdb1
-/dev/sdb1: UUID="66bda136-6e40-478b-87cd-f80e871b5ac3" TYPE="ext4" PARTUUID="8f991ad1-bb8b-f843-853a-946142c288b3"
-```
-
-или
-
-```
-# blkid
-/dev/sdb1: UUID="66bda136-6e40-478b-87cd-f80e871b5ac3" TYPE="ext4" PARTUUID="8f991ad1-bb8b-f843-853a-946142c288b3"
-***
-```
-
-<br/>
-
-```
-# mount /dev/sdb1 /mnt/dsk1/
-```
-
-<br/>
-
-```
--- Если нужно отмонтировать
-# umount /mnt/dsk1/
+```shell
+$ sudo blkid /dev/sdb1
+/dev/sdb1: UUID="875447e4-0a36-42a5-a3e1-e6ce7ae6e100" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="9b93e791-01"
 ```
 
 <br/>
 
 ### Запись в fstab (чтобы после каждой загрузки не монтировать заново)
 
-```
-# vi /etc/fstab
+```shell
+$ sudo vi /etc/fstab
 ```
 
 <br/>
 
 ```shell
-# 1 TB
-UUID=66bda136-6e40-478b-87cd-f80e871b5ac3 /mnt/dsk1 ext4 defaults 0 0
+# Goldenfir 1 TB
+UUID=875447e4-0a36-42a5-a3e1-e6ce7ae6e100 /mnt/dsk1 ext4 defaults 0 0
 ```
 
 <br/>
 
-```
-# mount /mnt/dsk1/
+```shell
+$ sudo mount /mnt/dsk1/
 ```
 
 <br/>
@@ -133,22 +126,21 @@ UUID=66bda136-6e40-478b-87cd-f80e871b5ac3 /mnt/dsk1 ext4 defaults 0 0
 
 <br/>
 
-```
-# tune2fs /dev/sdb1 -m 0
+```shell
+$ sudo tune2fs /dev/sdb1 -m 0
 ```
 
 <br/>
 
-```
-# df -h
-***
-/dev/sdb1       916G   77M  916G   1% /mnt/dsk1
+```shell
+$ df -h | grep sdb1
+/dev/sdb1       916G   28K  916G   1% /mnt/dsk1
 ```
 
 <br/>
 
 ### Разрешу пользователю писать на диск
 
-```
-# chown -R <username> /mnt/dsk1
+```shell
+$ sudo chown -R ${USERNAME} /mnt/dsk1
 ```
