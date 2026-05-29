@@ -58,6 +58,7 @@ $ sudo apt install -y ubuntu-restricted-extras
 ```shell
 // Основные
 $ sudo apt install -y \
+    webp-pixbuf-loader \
     vim \
     openssh-server \
     net-tools traceroute iputils-ping wakeonlan \
