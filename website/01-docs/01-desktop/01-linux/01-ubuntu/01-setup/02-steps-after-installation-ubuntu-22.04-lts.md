@@ -80,7 +80,6 @@ $ sudo apt install -y \
     gimp \
     krita \
     usb-creator-gtk \
-    gnome-tweaks \
     gnome-screenshot
 ```
 
@@ -153,7 +152,19 @@ Keyboard -> Input Sources -> +Russian
 
 ### Смена раскладки клавиатуры по Alt + Shift
 
-Вот надо что-нибудь да испортить! По умолчанию, нужно выбрать комбинацию из 3х клваиш, чтобы сменить раскладку.
+```
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Shift>Alt_L']"
+```
+
+Если не заработает:
+
+<br/>
+
+```shell
+// Дополнительные
+$ sudo apt install -y \
+    gnome-tweaks
+```
 
 <br/>
 
