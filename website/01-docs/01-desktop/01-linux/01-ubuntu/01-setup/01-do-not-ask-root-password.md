@@ -11,7 +11,7 @@ permalink: /desktop/linux/ubuntu/setup/do-not-ask-root-password/
 <br/>
 
 **Делаю:**  
-2026.04.28
+2026.05.13
 
 <br/>
 
