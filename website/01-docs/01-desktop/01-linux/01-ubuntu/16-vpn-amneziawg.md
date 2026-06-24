@@ -11,7 +11,7 @@ permalink: /desktop/linux/ubuntu/vpn/amneziawg/
 # Установка amneziawg
 
 **Делаю:**  
-2026.04.29
+2026.06.08
 
 <br/>
 
@@ -53,6 +53,8 @@ $ sudo awg-quick down ./test.conf
 
 <br/>
 
+### Добавление нормального конфига
+
 https://warp-generator.github.io/
 
 // Пока перестало работать!  
@@ -60,9 +62,7 @@ https://github.com/ImMALWARE/bash-warp-generator
 
 <br/>
 
-// OK!
-
-Телеграм-боты:
+**Телеграм-боты:**
 
 ```
 @warp_generator_bot,
