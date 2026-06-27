@@ -10,20 +10,16 @@ permalink: /desktop/linux/ubuntu/download-youtube-playlist/
 
 <br/>
 
-Делаю:  
-2026.04.19
+Муторно! Не рекомендую! Лучше с помощью 4k video download.
 
 <br/>
 
-Автозаменой прошелся по командой. М.б. что и не работает.
+**Делаю:**  
+2026.06.27
 
 <br/>
 
-Т.к. youtube забанили в РФ. Можно скачивать в бесплатном <a href="//docs.gitops.ru/tools/clouds/google/google-cloud-shell/run/">google cloud shell</a>, чем я сосбственно сейчас и занимаюсь.
-
-<br/>
-
-**Программа: **
+**Программа:**
 https://github.com/yt-dlp/yt-dlp/wiki/Installation
 
 <br/>
@@ -73,17 +69,17 @@ $ mkdir -p ~/Downloads/myPlaylist && cd ~/Downloads/myPlaylist
 
 Нужно скачать вот этот плей лист.
 
-https://www.youtube.com/watch?v=DU9K1rIUWrY&list=PLhgRAQ8BwWFaxlkNNtO0NDPmaVO9txRg8
+https://www.youtube.com/watch?v=9LBWncqtO8U&list=PLQxDHpeGU14AfMnI41zEo5G1xfZXhSVm0
 
 <br/>
 
-Удаляю из url v=<ID> т.е v=DU9K1rIUWrY
+Удаляю из url v=<ID> т.е v=9LBWncqtO8U
 
 <br/>
 
 ```shell
 // Скачиваю видео лучшего качества из имеющегося:
-$ yt-dlp -i -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 https://www.youtube.com/watch?list=PLhgRAQ8BwWFaxlkNNtO0NDPmaVO9txRg8 --output "%(title)s.%(ext)s"
+$ yt-dlp -i -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 https://www.youtube.com/watch?list=PLQxDHpeGU14AfMnI41zEo5G1xfZXhSVm0 --output "%(title)s.%(ext)s"
 ```
 
 <br/>
@@ -93,7 +89,9 @@ output я меняю, т.к. по умолчанию в конце добавл�
 
 <br/>
 
-YouTube стал блочить и просить логиниться.
+### Возможные проблемы
+
+YouTube может начать блочить скачку. Требуется дополнительно указывать cookies.
 
 <br/>
 
