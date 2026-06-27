@@ -11,10 +11,11 @@ permalink: /desktop/linux/ubuntu/setup/
 <br/>
 
 <ul>
-    <li><a href="/desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-22.04-lts/">Шаги после инсталляции Ubuntu 22.04 LTS</a>
+    <li>
+        <a href="/desktop/linux/ubuntu/setup/steps-after-installation-ubuntu-22.04-lts/">Шаги после инсталляции Ubuntu 22.04 LTS</a>
     </li>
-    <li><a href="/desktop/linux/ubuntu/mount/hdd/">Монтирование жестких дисков</a>
+    <li>
+        <a href="/desktop/linux/grub/">Выбор загружаемого при старте kernel в Ubuntu 20</a>
     </li>
-    <li><a href="/desktop/linux/grub/">Выбор загружаемого при старте kernel в Ubuntu 20</a>
-    </li>
+
 </ul>
