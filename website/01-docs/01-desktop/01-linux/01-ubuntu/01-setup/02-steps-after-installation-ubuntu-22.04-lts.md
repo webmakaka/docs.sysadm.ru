@@ -77,10 +77,17 @@ $ sudo apt install -y \
     transmission \
     ffmpegthumbnailer \
     whois \
-    gimp \
-    krita \
     usb-creator-gtk \
     gnome-screenshot
+```
+
+<br/>
+
+```shell
+// Дополнительные
+$ sudo apt install -y \
+    gimp \
+    krita
 ```
 
 <!--
@@ -152,8 +159,10 @@ Keyboard -> Input Sources -> +Russian
 
 ### Смена раскладки клавиатуры по Alt + Shift
 
-```
-gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Shift>Alt_L']"
+<br/>
+
+```shell
+$ gsettings set org.gnome.desktop.input-sources xkb-options "['grp:alt_shift_toggle']"
 ```
 
 Если не заработает:

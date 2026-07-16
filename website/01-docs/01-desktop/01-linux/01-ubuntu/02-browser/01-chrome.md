@@ -11,12 +11,18 @@ permalink: /desktop/linux/ubuntu/browser/chrome/
 <br/>
 
 **Последний раз делаю:**  
-2025.03.25
+2026.07.16
 
 <br/>
 
+```shell
+$ wget -qO- https://dl.google.com/linux/linux_signing_key.pub | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/google.gpg > /dev/null
 ```
-$ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+
+<br/>
+
+```shell
+// $ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 $ sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
 $ sudo apt update -y
 $ sudo apt install -y google-chrome-stable

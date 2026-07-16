@@ -11,7 +11,7 @@ permalink: /desktop/linux/ubuntu/setup/do-not-ask-root-password/
 <br/>
 
 **Делаю:**  
-2026.05.13
+2026.06.16
 
 <br/>
 
@@ -29,12 +29,14 @@ $ sudo vi /etc/sudoers
 <br/>
 
 ```
+# Allow members of group sudo to execute any command
 %sudo   ALL=(ALL:ALL) ALL
 ```
 
 меняю на:
 
 ```shell
+# Allow members of group sudo to execute any command
 #%sudo   ALL=(ALL:ALL) ALL
 %sudo   ALL=(ALL:ALL) NOPASSWD:ALL
 ```
