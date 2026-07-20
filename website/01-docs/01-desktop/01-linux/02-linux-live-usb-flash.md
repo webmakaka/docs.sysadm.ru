@@ -39,7 +39,7 @@ permalink: /desktop/linux/linux-live-usb-flash/
 
 ### Создать загрузочную флешку с Windows 10 в Linux
 
-Делаю:  
+**Делаю:**  
 25.04.2021
 
 <br/>
