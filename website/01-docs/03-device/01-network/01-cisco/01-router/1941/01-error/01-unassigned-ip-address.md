@@ -20,21 +20,21 @@ permalink: /device/network/cisco/router/1941/error/unassigned-ip-address/
 
 <br/>
 
-```
+```shell
 // Подключиться к роутеру
 $ ssh cisco-router-1941
 ```
 
 <br/>
 
-```
+```shell
 cisco-router-1941> en
 ```
 
 <br/>
 
-```
-# show ip interface brief
+```shell
+cisco-router-1941# show ip interface brief
 Interface                  IP-Address      OK? Method Status                Protocol
 Embedded-Service-Engine0/0 unassigned      YES NVRAM  administratively down down
 GigabitEthernet0/0         unassigned      YES DHCP   up                    up
@@ -49,8 +49,8 @@ Virtual-PPP1               unassigned      YES NVRAM  administratively down down
 
 <br/>
 
-```
-# show dhcp lease
+```shell
+cisco-router-1941# show dhcp lease
 Temp IP addr: 0.0.0.0  for peer on Interface: GigabitEthernet0/0
 Temp  sub net mask: 0.0.0.0
     DHCP Lease server: 0.0.0.0, state: 3 Selecting
@@ -69,13 +69,13 @@ Temp  sub net mask: 0.0.0.0
 
 <br/>
 
-```
-# conf t
+```shell
+cisco-router-1941# conf t
 
-# interface GigabitEthernet0/0
-# shutdown
+cisco-router-1941(config)# interface GigabitEthernet0/0
+cisco-router-1941(config-if)# shutdown
 
-# no shutdown
+cisco-router-1941(config-if)# no shutdown
 ```
 
 <br/>
@@ -86,7 +86,7 @@ Temp  sub net mask: 0.0.0.0
 
 ### М.б. что полезное можно посмотреть
 
-```
+```shell
 $ debug ip dhcp server events
 $ debug ip dhcp server packet
 

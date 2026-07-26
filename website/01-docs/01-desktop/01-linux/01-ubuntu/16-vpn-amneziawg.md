@@ -11,7 +11,13 @@ permalink: /desktop/linux/ubuntu/vpn/amneziawg/
 # Установка amneziawg
 
 **Делаю:**  
-2026.06.08
+2026.07.25
+
+<br/>
+
+```shell
+$ sudo apt update && sudo apt install resolvconf
+```
 
 <br/>
 
@@ -89,14 +95,3 @@ $ curl ifconfig.me
 ```shell
 $ sudo awg show
 ```
-
-<br/>
-
-### Ошибки:
-
-```
-// /usr/bin/awg-quick: line 32: resolvconf: command not found
-$ sudo apt update && sudo apt install resolvconf
-```
-
-
