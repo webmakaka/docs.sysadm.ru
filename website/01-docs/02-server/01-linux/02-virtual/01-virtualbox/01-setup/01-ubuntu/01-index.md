@@ -3,11 +3,10 @@ layout: page
 title: Инсталляция VirtualBox 7.X в командной строке в Ubuntu 22.04
 description: Инсталляция VirtualBox 7.X в командной строке в Ubuntu 22.04
 keywords: server, linux, virtual, virtualbox, setup, ubuntu,command line
-permalink: /tools/virtual/virtualbox/setup/ubuntu/
+permalink: /server/linux/virtual/virtualbox/setup/ubuntu/
 ---
 
 # Инсталляция VirtualBox 7.X в командной строке в Ubuntu 22.04
-
 
 <br/>
 
@@ -16,7 +15,7 @@ permalink: /tools/virtual/virtualbox/setup/ubuntu/
 
 <br/>
 
-```
+```shell
 $ mkdir ~/tmp
 $ cd ~/tmp/
 $ wget https://www.virtualbox.org/download/oracle_vbox_2016.asc
@@ -25,25 +24,25 @@ $ cat oracle_vbox_2016.asc | gpg --dearmor | sudo tee /usr/share/keyrings/virtua
 
 <br/>
 
-```
+```shell
 $ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/virtualbox.gpg] https://download.virtualbox.org/virtualbox/debian $(lsb_release -sc) contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
 ```
 
 <br/>
 
-```
+```shell
 $ sudo apt update -y
 ```
 
 <br/>
 
-```
+```shell
 $ apt-cache search virtualbox*
 ```
 
 <br/>
 
-```
+```shell
 // Последняя 7.2 ее и ставлю
 $ sudo apt install -y virtualbox-7.2
 
@@ -52,27 +51,27 @@ $ sudo apt install -y virtualbox-7.2
 
 <br/>
 
-```
+```shell
 $ vboxmanage --version
 7.2.0r170228
 ```
 
 <br/>
 
-```
+```shell
 $ CTRL^D
 ```
 
 <br/>
 
-```
+```shell
 // Добавить пользователя в группу vboxusers
 $ sudo usermod -aG vboxusers ${USER}
 ```
 
 <br/>
 
-```
+```shell
 // В группе vboxusers должен появиться этот пользователь
 $ cat /etc/group | grep vboxusers
 ```
@@ -113,7 +112,7 @@ E: Unable to correct problems, you have held broken packages.
 
 <br/>
 
-```
+```shell
 $ sudo apt-get update
 $ sudo apt-cache search virtualbox
 $ sudo apt-get install -y virtualbox-7.0
@@ -133,14 +132,14 @@ $ vboxmanage --version
 
 <br/>
 
-```
+```shell
 -- если нужно удалить старый
 $ VBoxManage extpack uninstall "Oracle VM VirtualBox Extension Pack"
 ```
 
 <br/>
 
-```
+```shell
 $ VBoxManage list extpacks
 Extension Packs: 0
 ```
@@ -165,7 +164,7 @@ VBoxManage: error: Context: "RTEXITCODE handleExtPack(HandlerArg*)" at line 1424
 
 <br/>
 
-```
+```shell
 $ sudo su -
 # cd /tmp/
 # wget http://download.virtualbox.org/virtualbox/6.1.38/Oracle_VM_VirtualBox_Extension_Pack-6.1.38.vbox-extpack
@@ -174,7 +173,7 @@ $ sudo su -
 
 <br/>
 
-```
+```shell
 $ VBoxManage list extpacks
 Extension Packs: 1
 Pack no. 0:   Oracle VM VirtualBox Extension Pack
@@ -200,7 +199,7 @@ Why unusable:
 
 <br/>
 
-```
+```shell
 # modprobe vboxguest
 modprobe: ERROR: could not insert 'vboxguest': No such device
 ```
@@ -221,7 +220,7 @@ http://www.virtualbox.org/manual/ch04.html#idp11277648
 
 <br/>
 
-```
+```shell
 $ sudo apt install -y wget gcc make perl p7zip-full bzip2 tar
 
 $ mkdir -p ~/tmp
@@ -253,7 +252,7 @@ Settings -> Display -> Screen -> 128 MB
 
 <br/>
 
-```
+```shell
 $ vi ~/.bashrc
 ```
 
@@ -263,7 +262,7 @@ $ vi ~/.bashrc
 
 <br/>
 
-```
+```shell
 ###############################
 # READ BASH PROFILE
 
@@ -275,7 +274,7 @@ $ vi ~/.bashrc
 
 <br/>
 
-```
+```shell
 $ vi ~/.bash_profile
 ```
 
@@ -292,14 +291,14 @@ export VM_HOME=$HOME/machines
 
 <br/>
 
-```
+```shell
 // Применить новые параметры:
 $ source ~/.bash_profile
 ```
 
 <br/>
 
-```
+```shell
 $ echo ${VM_HOME}
 $ mkdir -p ${VM_HOME}
 ```
