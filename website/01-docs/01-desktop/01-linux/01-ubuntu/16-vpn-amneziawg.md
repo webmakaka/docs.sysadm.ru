@@ -61,20 +61,10 @@ $ sudo awg-quick down ./test.conf
 
 ### Добавление нормального конфига
 
-https://warp-generator.github.io/
-
-// Пока перестало работать!  
-https://github.com/ImMALWARE/bash-warp-generator
-
 <br/>
 
-**Телеграм-боты:**
-
-```
-@warp_generator_bot,
-@free_vpn_amnezia_bot,
-@warpGuardBot.
-```
+**AmneziaWG Config Generator:**  
+https://github.com/HereIamGosu/amnezia-config-gen
 
 <br/>
 
