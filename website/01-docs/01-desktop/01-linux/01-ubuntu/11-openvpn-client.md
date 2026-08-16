@@ -22,7 +22,7 @@ https://openvpn.net/community-downloads/
 <br/>
 
 ```
-$ sudo apt install -y openvpn
+$ sudo apt install -y openvpn net-tools inetutils-traceroute
 
 // Дополнительный необязательный пакет
 // Понадобился, чтобы использовались DNS сервера внутренней сети компании
@@ -269,4 +269,33 @@ $ sudo systemctl disable openvpn
 ```
 $ sudo service --status-all | grep openvpn
  [ - ]  openvpn
+```
+
+<br/>
+
+### Команды
+
+<br/>
+
+```shell
+$ curl ifconfig.me
+```
+
+<br/>
+
+```shell
+$ route -n
+```
+
+<br/>
+
+```shell
+$ systemctl status systemd-resolved
+```
+
+<br/>
+
+```shell
+$ resolvectl query linkedin.com
+linkedin.com: 10.224.46.83
 ```
