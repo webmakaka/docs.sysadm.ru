@@ -29,3 +29,5 @@ permalink: /
 email:
 
 ![Marley](/img/a3333333mail.gif 'Marley')
+
+<a href="https://spam.sysadm.ru">spam check</a>.
