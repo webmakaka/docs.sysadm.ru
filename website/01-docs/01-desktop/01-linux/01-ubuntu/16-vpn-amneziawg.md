@@ -85,3 +85,30 @@ $ curl ifconfig.me
 ```shell
 $ sudo awg show
 ```
+
+<br/>
+
+**Делаю:**  
+2026.08.20
+
+<br/>
+
+```
+sudo apt install libxcb-cursor0
+```
+
+<br/>
+
+```sheel
+// amnezia-client
+https://github.com/amnezia-vpn/amnezia-client/releases/
+
+$ wget https://github.com/amnezia-vpn/amnezia-client/releases/download/5.0.0.5/AmneziaVPN_5.0.0.5_linux_x64.run
+
+
+Устанавливается в гуи
+
+
+// запуск
+$ AmneziaVPN
+```

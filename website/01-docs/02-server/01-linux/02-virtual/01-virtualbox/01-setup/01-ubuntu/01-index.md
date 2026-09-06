@@ -190,6 +190,22 @@ Why unusable:
 
 ### Инсталляция Guest Additions в командной строке
 
+<br/>
+
+Делаю:  
+2026.08.20
+
+Насколько понял, можно и так установить:
+
+```bash
+$ sudo apt update && sudo apt install -y virtualbox-guest-x11 virtualbox-guest-utils
+$ sudo reboot
+```
+
+И не заморачиваться с тем, что описано далее.
+
+<br/>
+
 Делаю:  
 2024.10.05
 

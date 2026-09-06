@@ -16,8 +16,11 @@ $ sudo vi /etc/hosts
 
 <br/>
 
-```
-81.17.30.22 nnm-club.me
+```shell
+0.0.0.0 newsru.com
+0.0.0.0 rbc.ru
+0.0.0.0 lenta.ru
+0.0.0.0 searchengines.guru
 
 0.0.0.0 blackhole.beeline.ru
 0.0.0.0 mailtrack.io
@@ -25,11 +28,6 @@ $ sudo vi /etc/hosts
 0.0.0.0 informer.yandex.ru
 0.0.0.0 naydex.net
 0.0.0.0 *.naydex.net
-
-0.0.0.0 newsru.com
-0.0.0.0 rbc.ru
-0.0.0.0 lenta.ru
-
 
 0.0.0.0 jivosite.ru
 0.0.0.0 www.jivosite.ru
@@ -43,8 +41,6 @@ $ sudo vi /etc/hosts
 0.0.0.0 winline.ru
 
 0.0.0.0 downloadtutorials.net
-
-
 ```
 
 -
@@ -58,17 +54,20 @@ https://github.com/michaeltrimm/hosts-blocking/blob/master/_hosts.txt
 
 <br/>
 
-    $ sudo su -
-    # cd /tmp
+```shell
+$ cd /tmp
 
-    # curl https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt --output badwebsites.txt
+$ curl https://raw.githubusercontent.com/michaeltrimm/hosts-blocking/master/_hosts.txt --output badwebsites.txt
 
-    # cat ./badwebsites.txt >> /etc/hosts
+$ cat ./badwebsites.txt | sudo tee -a /etc/hosts > /dev/null
+```
 
 <br/>
 
 И отсюда:
 
-    # curl https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.hosts --output badwebsites.txt
+```shell
+$ curl https://gitlab.com/quidsup/ntrk-tracker-radar/-/raw/master/ddg_tracker_radar_confirmed.hosts --output badwebsites.txt
 
-    # cat ./badwebsites.txt >> /etc/hosts
+$ cat ./badwebsites.txt | sudo tee -a /etc/hosts > /dev/null
+```

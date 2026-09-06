@@ -11,7 +11,7 @@ permalink: /desktop/linux/ubuntu/setup/do-not-ask-root-password/
 <br/>
 
 **Делаю:**  
-2026.06.16
+2026.08.20
 
 <br/>
 
@@ -22,7 +22,7 @@ $ sudo usermod -aG sudo ${USER}
 
 <br/>
 
-```
+```shell
 $ sudo vi /etc/sudoers
 ```
 
