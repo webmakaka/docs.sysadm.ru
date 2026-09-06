@@ -1,5 +1,5 @@
 # Stage 1: Build stage
-FROM ruby:2.7-slim AS builder
+FROM ruby:3.3-slim AS builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
@@ -14,9 +14,9 @@ ENV LANGUAGE=en_US.UTF-8
 
 WORKDIR /project
 
-RUN gem install bundler -v 2.4.22
+RUN gem install bundler
 
-# COPY Gemfile Gemfile.lock ./
+COPY Gemfile ./
 RUN bundle install
 
 COPY . .
