@@ -72,7 +72,7 @@ Offtopic:
 
 ### Подготовленные образы VirtualBox с Linux
 
-<a href="http://www.osboxes.org/virtualbox-images/" rel="nofollow">osboxes</a>
+<a href="https://www.osboxes.org/virtualbox-images/" rel="nofollow">osboxes</a>
 
 <br/>
 

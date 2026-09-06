@@ -138,7 +138,7 @@ $ yt-dlp -f "bestvideo+bestaudio/best" \
 
 **Можно также выбрать более подходящий формат:**
 
-    yt-dlp -F http://www.youtube.com/watch?v=3JZ_D3ELwOQ
+    yt-dlp -F https://www.youtube.com/watch?v=3JZ_D3ELwOQ
     sample output:
 
     [youtube] Setting language
@@ -166,13 +166,13 @@ $ yt-dlp -f "bestvideo+bestaudio/best" \
 
 You can choose best and type
 
-    $ yt-dlp -f 22 http://www.youtube.com/watch?v=3JZ_D3ELwOQ
+    $ yt-dlp -f 22 https://www.youtube.com/watch?v=3JZ_D3ELwOQ
 
 <br/>
 
 To get the best video quality (1080p DASH - format "137") and best audio quality (DASH audio - format "140"), you must use the following command:
 
-    $ yt-dlp -f 137+140 http://www.youtube.com/watch?v=3JZ_D3ELwOQ
+    $ yt-dlp -f 137+140 https://www.youtube.com/watch?v=3JZ_D3ELwOQ
 
 <br/>
 
