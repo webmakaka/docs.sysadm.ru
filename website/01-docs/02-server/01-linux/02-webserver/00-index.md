@@ -30,7 +30,7 @@ permalink: /server/linux/webserver/
 
 ### Zend Framework 2 - Installing in Windows
 
-[Brad Traversy, YouTube](http://www.youtube.com/watch?v=NJVS5yt5fHw)
+[Brad Traversy, YouTube](https://www.youtube.com/watch?v=NJVS5yt5fHw)
 
 <br/>
 
