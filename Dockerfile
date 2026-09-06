@@ -25,12 +25,7 @@ RUN bundle install
 COPY . .
 RUN bundle exec jekyll build
 
-RUN bundle exec htmlproofer ./_site \
-    --ignore-files '["/\\.git/", "/_site/404\\.html"]' \
-    --only-4xx \
-    --allow-hash-href \
-    --assume-extension
-
+RUN bundle exec htmlproofer ./_site
 
 # Stage 2: Hosting stage
 FROM nginx:1.27-alpine
