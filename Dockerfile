@@ -22,7 +22,9 @@ RUN bundle install
 
 COPY . .
 RUN bundle exec jekyll build
-RUN bundle exec htmlproofer ./_site --file-ignore /.git/,./_site/404.html --only-4xx --check-html --allow-hash-href --assume-extension
+# RUN bundle exec htmlproofer ./_site --file-ignore /.git/,./_site/404.html --only-4xx --check-html --allow-hash-href --assume-extension
+RUN bundle exec htmlproofer ./_site --file-ignore /.git/,./_site/404.html --check-html --allow-hash-href --assume-extension --http-status-ignore "500,502,503,504"
+
 
 # Stage 2: Hosting stage
 FROM nginx:1.27-alpine
