@@ -4,6 +4,7 @@ FROM ruby:3.3-slim AS builder
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     locales \
+    libcurl4 \
     && rm -rf /var/lib/apt/lists/*
 
 RUN echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen && locale-gen
