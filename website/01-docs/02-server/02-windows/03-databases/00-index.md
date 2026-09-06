@@ -8,4 +8,4 @@ permalink: /server/windows/database/
 
 # Базы Данных в Windows
 
-[Oracle](http://oracle-dba.ru/database/installation/)
+[Oracle](https://oracle-dba.ru/database/installation/)

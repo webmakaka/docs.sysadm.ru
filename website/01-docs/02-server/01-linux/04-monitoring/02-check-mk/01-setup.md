@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=fixkbancVc4&list=PL34sAs7_26wODGPEgaHrhRiXkax0q7
 
 <br/>
 
-Предполагается что уже установлен <a href="//gitops.ru/tools/virtual/virtualbox/setup/ubuntu/">VirtualBox</a>, <a href="//gitops.ru/tools/virtual/vagrant/setup/ubuntu/">Vagrant</a>.
+Предполагается что уже установлен <a href="https://gitops.ru/tools/virtual/virtualbox/setup/ubuntu/">VirtualBox</a>, <a href="https://gitops.ru/tools/virtual/vagrant/setup/ubuntu/">Vagrant</a>.
 
 <br/>
 

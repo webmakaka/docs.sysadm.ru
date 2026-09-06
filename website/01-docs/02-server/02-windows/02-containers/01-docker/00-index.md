@@ -43,7 +43,7 @@ https://docs.microsoft.com/en-us/virtualization/windowscontainers/quick-start/qu
 <br/>
 
 <div align="center">
-	<img src="//stefanscherer.github.io/content/images/2016/09/docker-for-windows-switch.gif" alt="Run Linux and Windows Containers on Windows 10" border="0" />
+	<img src="https://stefanscherer.github.io/content/images/2016/09/docker-for-windows-switch.gif" alt="Run Linux and Windows Containers on Windows 10" border="0" />
 </div>
 
 <br/>

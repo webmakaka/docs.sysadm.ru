@@ -13,7 +13,7 @@ permalink: /desktop/linux/networks/vpn/xl2tp/centos/6/
 <br/>
 
 <p style="padding:10px; border:thin solid black;">
-Нашел в сети статью о настройке <strong><a href="http://habrahabr.ru/post/128599/">VPN-сервер в стиле how-to (pptpd+mysql+radius) на CentOS6</a></strong>.
+Нашел в сети статью о настройке <strong><a href="https://habr.com/ru/articles/128599/">VPN-сервер в стиле how-to (pptpd+mysql+radius) на CentOS6</a></strong>.
 
 <br/>
 Если я все правильно понимаю, схема приблизительно похожа на ту, что создают у себя провайдеры. <br/>

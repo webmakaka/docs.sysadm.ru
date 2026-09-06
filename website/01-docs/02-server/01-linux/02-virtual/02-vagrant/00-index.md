@@ -18,7 +18,7 @@ permalink: /server/linux/virtual/vagrant/
 
 ### Наработки админа сайта
 
-[Инсталляция Vargant в Ubuntu 20.04.1](//gitops.ru/tools/virtual/vagrant/setup/ubuntu/)
+[Инсталляция Vargant в Ubuntu 20.04.1](https://gitops.ru/tools/virtual/vagrant/setup/ubuntu/)
 
 [Знакомство с Vagrant](/server/linux/virtual/vagrant/crash-course/)
 
@@ -32,11 +32,11 @@ permalink: /server/linux/virtual/vagrant/
 
 [Vagrant c Docker внутри](/server/linux/virtual/vagrant/vagrant-with-docker/)
 
-[Деплой nodejs приложения на удаленный сервер с помощью ansible](//gitops.ru/ansible/deploy-node-app-by-ansible/)
+[Деплой nodejs приложения на удаленный сервер с помощью ansible](https://gitops.ru/ansible/deploy-node-app-by-ansible/)
 
 [Vagrant и Ansible playbook для подготовки виртуальных машин Virtualbox](/server/linux/virtual/vagrant/vagrant-ansible-playbook/)
 
-[Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами](//gitops.ru/tools/cvs/gitlab/vagrant/)
+[Разворачиваем Gitlab в виртуальной машине Vagrant подготовленными скриптами](https://gitops.ru/tools/cvs/gitlab/vagrant/)
 
 [Скрипты, разворачивающие Single Master Kubernetes Cluster в VirtualBox](https://github.com/webmakaka/vagrant-kubernetes-3-node-cluster-centos7)
 

@@ -42,7 +42,7 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
 
 <br/>
 
-Инсталлируем <a href="//gitops.ru/devops/containers/docker/setup/ubuntu/">docker и docker-compose</a>.
+Инсталлируем <a href="https://gitops.ru/devops/containers/docker/setup/ubuntu/">docker и docker-compose</a>.
 
 <br/>
 
