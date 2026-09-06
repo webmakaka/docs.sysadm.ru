@@ -13,6 +13,8 @@ ENV LC_ALL=C.UTF-8
 ENV LANG=en_US.UTF-8
 ENV LANGUAGE=en_US.UTF-8
 
+ENV SASS_OPTIONS="--quiet-deps"
+
 WORKDIR /project
 
 RUN gem install bundler
@@ -23,7 +25,13 @@ RUN bundle install
 COPY . .
 RUN bundle exec jekyll build
 # RUN bundle exec htmlproofer ./_site --file-ignore /.git/,./_site/404.html --only-4xx --check-html --allow-hash-href --assume-extension
-RUN bundle exec htmlproofer ./_site --file-ignore /.git/,./_site/404.html --check-html --allow-hash-href --assume-extension --http-status-ignore "500,502,503,504"
+# RUN bundle exec htmlproofer ./_site --file-ignore /.git/,./_site/404.html --check-html --allow-hash-href --assume-extension --http-status-ignore "500,502,503,504"
+RUN bundle exec htmlproofer ./_site \
+    --ignore-files "/\.git/,/\_site\/404\.html/" \
+    --only-4xx \
+    --allow-hash-href \
+    --assume-extension
+
 
 
 # Stage 2: Hosting stage
