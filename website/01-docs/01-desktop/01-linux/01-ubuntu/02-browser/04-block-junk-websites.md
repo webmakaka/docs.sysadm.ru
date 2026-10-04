@@ -21,6 +21,11 @@ $ sudo vi /etc/hosts
 0.0.0.0 rbc.ru
 0.0.0.0 lenta.ru
 0.0.0.0 searchengines.guru
+0.0.0.0 pikabu.ru
+0.0.0.0 sportbox.ru
+0.0.0.0 news.sportbox.ru
+0.0.0.0 www.sports.ru
+0.0.0.0 sports.ru
 
 0.0.0.0 blackhole.beeline.ru
 0.0.0.0 mailtrack.io
