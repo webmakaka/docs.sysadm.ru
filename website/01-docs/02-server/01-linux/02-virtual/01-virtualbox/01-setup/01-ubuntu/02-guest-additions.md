@@ -3,7 +3,7 @@ layout: page
 title: Инсталляция Guest Additions в командной строке Ubuntu 22.04
 description: Инсталляция Guest Additions в командной строке Ubuntu 22.04
 keywords: server, linux, virtual, virtualbox, setup, ubuntu,command line
-permalink: /tools/virtual/virtualbox/setup/ubuntu/guest-additions/
+permalink: /server/linux/virtual/virtualbox/setup/ubuntu/guest-additions/
 ---
 
 # Инсталляция Guest Additions в командной строке Ubuntu 22.04

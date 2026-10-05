@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=fixkbancVc4&list=PL34sAs7_26wODGPEgaHrhRiXkax0q7
 
 <br/>
 
-Предполагается что уже установлен <a href="/tools/virtual/virtualbox/setup/ubuntu/">VirtualBox</a>, <a href="/tools/virtual/vagrant/setup/ubuntu/">Vagrant</a>.
+Предполагается что уже установлен <a href="/server/linux/virtual/virtualbox/setup/ubuntu/">VirtualBox</a>, <a href="/tools/virtual/vagrant/setup/ubuntu/">Vagrant</a>.
 
 <br/>
 
