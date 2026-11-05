@@ -13,7 +13,7 @@ permalink: /desktop/linux/ubuntu/editors/vscode/
 <br/>
 
 **Делаю:**  
-2026.07.20
+2026.11.06
 
 <br/>
 
