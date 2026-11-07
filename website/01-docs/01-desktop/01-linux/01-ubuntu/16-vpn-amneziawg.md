@@ -88,13 +88,15 @@ $ sudo awg show
 
 <br/>
 
+### Какой-то AmneziaVPN клиент с GUI
+
 **Делаю:**  
-2026.08.20
+2026.11.07
 
 <br/>
 
-```
-sudo apt install libxcb-cursor0
+```sheel
+$ sudo apt install libxcb-cursor0
 ```
 
 <br/>
@@ -103,11 +105,16 @@ sudo apt install libxcb-cursor0
 // amnezia-client
 https://github.com/amnezia-vpn/amnezia-client/releases/
 
-$ wget https://github.com/amnezia-vpn/amnezia-client/releases/download/5.0.0.5/AmneziaVPN_5.0.0.5_linux_x64.run
+$ wget https://github.com/amnezia-vpn/amnezia-client/releases/download/5.1.0.6/AmneziaVPN_5.1.0.6_linux_x64.run
 
 
-Устанавливается в гуи
+// Устанавливается в гуи
+$ chmod +x ./AmneziaVPN_5.1.0.6_linux_x64.run 
+$ ./AmneziaVPN_5.1.0.6_linux_x64.run 
 
+
+// Если какая-то амнезия залезла в память и не вылазит
+// $ sudo killall AmneziaVPN
 
 // запуск
 $ AmneziaVPN
